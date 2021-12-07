@@ -12,14 +12,12 @@ public class AccountTest {
         double withdrawAmount;
 
         System.out.print("Enter Withdraw amount for account1: ");
-        ;
         withdrawAmount = input.nextDouble();
         account1.debit(withdrawAmount);
         System.out.printf("account1 balance $%.2f\n", account1.getBalance());
         System.out.printf("account2 balance $%.2f\n", account2.getBalance());
 
         System.out.print("Enter Withdraw amount for account2: ");
-        ;
         withdrawAmount = input.nextDouble();
         System.out.printf("\nsubtracting %.2f from account2 balance\n", withdrawAmount);
         account2.debit(withdrawAmount);
