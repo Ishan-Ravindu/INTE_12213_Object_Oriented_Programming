@@ -1,4 +1,4 @@
-package Task1;
+package Lab2.Task1;
 
 public class NumberHolder {
     public int anInt;

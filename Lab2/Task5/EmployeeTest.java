@@ -1,4 +1,4 @@
-package Task5;
+package Lab2.Task5;
 
 public class EmployeeTest {
     public static void main(String[] args) {

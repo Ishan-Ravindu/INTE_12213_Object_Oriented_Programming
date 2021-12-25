@@ -1,4 +1,4 @@
-package Task6;
+package Lab2.Task6;
 
 public class SeatType {
     double seatPrice;

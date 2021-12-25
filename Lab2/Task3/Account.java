@@ -1,4 +1,4 @@
-package Task3;
+package Lab2.Task3;
 
 public class Account {
     private double balance;

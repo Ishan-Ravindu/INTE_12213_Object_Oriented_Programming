@@ -1,4 +1,4 @@
-package Task4;
+package Lab2.Task4;
 
 public class GradeBookTest {
     public static void main(String[] args) {
