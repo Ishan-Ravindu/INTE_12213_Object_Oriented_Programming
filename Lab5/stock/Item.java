@@ -1,10 +1,13 @@
 package Lab5.stock;
 
-public class Item {
+public class Item extends Quantity{
     private String name;
     private String description;
 
-    public Item(String name, String description) {
+
+
+    public Item(int count, String name, String description) {
+        super(count);
         this.name = name;
         this.description = description;
     }

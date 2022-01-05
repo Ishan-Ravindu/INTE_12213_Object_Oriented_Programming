@@ -3,8 +3,9 @@ package Lab5.stock;
 public class Furniture extends Item{
     private String material;
 
-    public Furniture(String name, String description,String material) {
-        super(name, description);
+
+    public Furniture(int count, String name, String description, String material) {
+        super(count, name, description);
         this.material = material;
     }
 

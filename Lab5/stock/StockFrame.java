@@ -9,17 +9,14 @@ import java.awt.event.ActionListener;
 
 public class StockFrame extends JFrame implements ActionListener{
     JFrame frame =new JFrame();
-    JLabel label = new JLabel("hello");
     JButton logoutButton = new JButton("LOGOUT");
+    ItemList itemList = new ItemList();
     
  
     public StockFrame() {
         //set layout
         frame.setLayout(null);
-        //set location and size
-        label.setBounds(50, 150, 100, 30);
         //addComponentsToFrame
-        frame.add(label);
         frame.add(logoutButton);
         //set location and size
         logoutButton.setBounds(100, 100, 100, 100);
@@ -33,14 +30,24 @@ public class StockFrame extends JFrame implements ActionListener{
         frame.setBounds(250, 100, 850, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(true);
- 
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == logoutButton) {
             frame.dispose();
             new LoginFrame();
+          
       }
- 
-}
+    }
+    //     Furniture chair = new Furniture(10,"teacher chair","description","wood");
+    //     Furniture table = new Furniture(20,"teacher table","description","wood");
+    //     this.itemList.addFurnitures(chair);
+    //     this.itemList.addFurnitures(table);
+
+    //     Electronic fan = new Electronic(50,"table fan","fan description","AC");
+    //     Electronic tv = new Electronic(5,"smart tv","tv description","AC");
+    //     this.itemList.addElectronics(fan);
+    //     this.itemList.addElectronics(tv);
+
 }

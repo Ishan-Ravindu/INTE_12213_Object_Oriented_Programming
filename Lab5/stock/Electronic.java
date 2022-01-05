@@ -3,8 +3,10 @@ package Lab5.stock;
 public class Electronic extends Item{
     private String powerType;
 
-    public Electronic(String name, String description, String powerType) {
-        super(name, description);
+
+
+    public Electronic(int count, String name, String description, String powerType) {
+        super(count, name, description);
         this.powerType = powerType;
     }
 
