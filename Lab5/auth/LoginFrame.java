@@ -1,13 +1,13 @@
 package Lab5.auth;
+import Lab5.stock.StockFrame;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
  
 public class LoginFrame extends JFrame implements ActionListener {
  
-    Container container = getContentPane();
+    JFrame frame = new JFrame();
     JLabel emailLabel = new JLabel("EMAIL");
     JLabel passwordLabel = new JLabel("PASSWORD");
     JTextField emailTextField = new JTextField();
@@ -18,18 +18,9 @@ public class LoginFrame extends JFrame implements ActionListener {
  
  
     public LoginFrame() {
-        setLayoutManager();
-        setLocationAndSize();
-        addComponentsToContainer();
-        addActionEvent();
- 
-    }
- 
-    public void setLayoutManager() {
-        container.setLayout(null);
-    }
- 
-    public void setLocationAndSize() {
+        //set layout
+        frame.setLayout(null);
+        //set location and size
         emailLabel.setBounds(50, 150, 100, 30);
         passwordLabel.setBounds(50, 220, 100, 30);
         emailTextField.setBounds(150, 150, 150, 30);
@@ -37,30 +28,29 @@ public class LoginFrame extends JFrame implements ActionListener {
         showPassword.setBounds(150, 250, 150, 30);
         loginButton.setBounds(50, 300, 100, 30);
         resetButton.setBounds(200, 300, 100, 30);
- 
- 
-    }
- 
-    public void addComponentsToContainer() {
-        container.add(emailLabel);
-        container.add(passwordLabel);
-        container.add(emailTextField);
-        container.add(passwordField);
-        container.add(showPassword);
-        container.add(loginButton);
-        container.add(resetButton);
-    }
- 
-    public void addActionEvent() {
+        //addComponentsToFrame
+        frame.add(emailLabel);
+        frame.add(passwordLabel);
+        frame.add(emailTextField);
+        frame.add(passwordField);
+        frame.add(showPassword);
+        frame.add(loginButton);
+        frame.add(resetButton);
+        // addActionEvent
         loginButton.addActionListener(this);
         resetButton.addActionListener(this);
         showPassword.addActionListener(this);
+        //other
+        frame.setTitle("Login Form");
+        frame.setVisible(true);
+        frame.setBounds(450, 100, 370, 600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(true);
+
     }
- 
- 
     @Override
     public void actionPerformed(ActionEvent e) {
-        //Coding Part of LOGIN button
+
         if (e.getSource() == loginButton) {
 
             String email = emailTextField.getText();
@@ -68,18 +58,19 @@ public class LoginFrame extends JFrame implements ActionListener {
             String pwd = new String(pwdText);
             Login login = new Login(email,pwd);
             if (login.signIn()) {
-                JOptionPane.showMessageDialog(this, "Login Successful");
+                frame.dispose();
+                new StockFrame();
             } else {
                 JOptionPane.showMessageDialog(this, "Invalid Username or Password");
             }
  
         }
-        //Coding Part of RESET button
+
         if (e.getSource() == resetButton) {
             emailTextField.setText("");
             passwordField.setText("");
         }
-       //Coding Part of showPassword JCheckBox
+
         if (e.getSource() == showPassword) {
             if (showPassword.isSelected()) {
                 passwordField.setEchoChar((char) 0);
