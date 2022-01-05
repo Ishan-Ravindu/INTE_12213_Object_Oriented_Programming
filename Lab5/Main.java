@@ -1,11 +1,16 @@
 package Lab5;
 
-import Lab5.auth.Login;
-
+import javax.swing.JFrame;
+import Lab5.auth.LoginFrame;
 public class Main {
     public static void main(String args[]){
+       
+        LoginFrame frame = new LoginFrame();
+        frame.setTitle("Login Form");
+        frame.setVisible(true);
+        frame.setBounds(10, 10, 370, 600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // frame.setResizable(true);
 
-        Login login = new Login("ishan@gmail.com","123@ishan");
-        System.out.println(login.signIn());
     }
 }

@@ -11,7 +11,7 @@ public class Login {
     public boolean signIn() {
         UserList userList = new UserList();
         for (User i : userList.getUsers()) {
-            if(this.email ==i.getEmail()&&this.password==i.getPassword()){
+            if(this.email.equalsIgnoreCase(i.getEmail()) &&this.password.equalsIgnoreCase(i.getPassword())){
                 return true;
             }
            }
