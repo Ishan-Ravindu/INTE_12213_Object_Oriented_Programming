@@ -1,13 +1,13 @@
 package Lab5.stock;
 
-import java.util.Vector;
+import java.util.ArrayList;
+
 
 public class ItemList {
-    // private Inventory[] inventories;
-    private Vector<Electronic> electronics;
-    private Vector<Furniture> furnitures;
+    private ArrayList<Electronic> electronics = new ArrayList<Electronic>();
+    private ArrayList<Furniture> furnitures= new ArrayList<Furniture>();
 
-    public Vector<Electronic> getElectronics() {
+    public ArrayList<Electronic> getElectronics() {
         return electronics;
     }
 
@@ -18,7 +18,8 @@ public class ItemList {
     public void removeElectronicByIndex(int index) {
         this.electronics.remove(index);
     }
-    public Vector<Furniture> getFurnitures() {
+    
+    public ArrayList<Furniture> getFurnitures() {
         return furnitures;
     }
 
