@@ -4,7 +4,7 @@ package Lab5.stock;
  * Quantity
  */
 public class Quantity {
-    int count;
+    private int count;
 
     public Quantity(int count) {
         this.count = count;
